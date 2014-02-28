@@ -3,7 +3,7 @@ return array (
 		'controllers' => array (
 				'invokables' => array (
 						'Album\Controller\Album' => 'Album\Controller\AlbumController',
-						'Album\Controller\AlbumEvent' => 'Album\Controller\EventController' 
+						'Album\Controller\Event\AlbumEvent' => 'Album\Controller\Event\EventController' 
 				) 
 		),
 		
@@ -29,7 +29,7 @@ return array (
 								'options' => array (
 										'route' => '/event[/]',
 										'defaults' => array (
-												'controller' => 'Album\Controller\AlbumEvent',
+												'controller' => 'Album\Controller\Event\AlbumEvent',
 												'action' => 'index' 
 										) 
 								) 

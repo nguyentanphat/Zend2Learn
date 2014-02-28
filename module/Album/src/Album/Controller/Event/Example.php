@@ -13,9 +13,6 @@ class Example implements EventManagerAwareInterface{
 				__CLASS__,
 				get_class ( $this )
 		) );
-// 		$events->addIdentifiers(array(
-// 				get_called_class()
-// 		));
 		$this->events = $events;
 	}
 	public function getEventManager() {
@@ -24,8 +21,8 @@ class Example implements EventManagerAwareInterface{
 		}
 		return $this->events;
 	}
-	public function doz($foo, $baz) {
-		$params = compact ( 'foo', 'baz' );
+	public function doz($id) {
+		$params = compact ('5');
 		$this->getEventManager ()->trigger (__FUNCTION__, $this, $params );
 // 		var_dump($params);
 	}
